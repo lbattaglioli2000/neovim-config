@@ -13,7 +13,12 @@ return {
           "lua_ls",
           "tsserver",
           "prismals",
-          "eslint"
+          "eslint",
+          "phpactor",
+          "html",
+          "graphql",
+          "gopls",
+          "spectral",
         },
       })
     end,
@@ -22,17 +27,16 @@ return {
     "neovim/nvim-lspconfig",
     config = function()
       local lspconfig = require("lspconfig")
-      -- Lua LSP Setup
+
       lspconfig.lua_ls.setup({})
-
-      -- TS LSP Setup
       lspconfig.tsserver.setup({})
-
-      -- ESLint LSP Setup
       lspconfig.eslint.setup({})
-
-      -- Prisma LSP Setup
       lspconfig.prismals.setup({})
+      lspconfig.phpactor.setup({})
+      lspconfig.html.setup({})
+      lspconfig.graphql.setup({})
+      lspconfig.gopls.setup({})
+      lspconfig.spectral.setup({})
 
       vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
