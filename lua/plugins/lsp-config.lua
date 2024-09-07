@@ -26,21 +26,52 @@ return {
   {
     "neovim/nvim-lspconfig",
     config = function()
+      local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
       local lspconfig = require("lspconfig")
 
-      lspconfig.lua_ls.setup({})
-      lspconfig.tsserver.setup({})
-      lspconfig.eslint.setup({})
-      lspconfig.prismals.setup({})
-      lspconfig.phpactor.setup({})
-      lspconfig.html.setup({})
-      lspconfig.graphql.setup({})
-      lspconfig.gopls.setup({})
-      lspconfig.spectral.setup({})
+      lspconfig.lua_ls.setup({
+        capabilities = capabilities,
+      })
+
+      lspconfig.tsserver.setup({
+        capabilities = capabilities
+      })
+
+      lspconfig.eslint.setup({
+        capabilities = capabilities
+      })
+
+      lspconfig.prismals.setup({
+        capabilities = capabilities
+      })
+
+      lspconfig.phpactor.setup({
+        capabilities = capabilities
+      })
+
+      lspconfig.html.setup({
+        capabilities = capabilities
+      })
+
+      lspconfig.graphql.setup({
+        capabilities = capabilities
+      })
+
+      lspconfig.gopls.setup({
+        capabilities = capabilities
+      })
+
+      lspconfig.spectral.setup({
+        capabilities = capabilities
+      })
+
 
       vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
+
       vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
     end,
   },
+
 }
