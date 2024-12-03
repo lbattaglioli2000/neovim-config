@@ -1,5 +1,17 @@
 return {
   {
+    'kevinhwang91/nvim-ufo',
+    requires = 'kevinhwang91/promise-async',
+    provider_selector = function()
+      return { "treesitter", "indent" }
+    end
+  },
+  {
+    "chrisgrieser/nvim-origami",
+    event = "VeryLazy",
+    opts = {}, -- needed even when using default config
+  },
+  {
     "hedyhli/outline.nvim",
     config = function()
       vim.keymap.set("n", "<C-o>", "<cmd>Outline<CR>", { desc = "Toggle Outline" })
@@ -59,6 +71,5 @@ return {
 
       alpha.setup(dashboard.opts)
     end,
-  }
-
+  },
 }
