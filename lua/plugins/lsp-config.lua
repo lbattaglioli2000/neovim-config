@@ -14,9 +14,7 @@ return {
           "tsserver",
           "prismals",
           "eslint",
-          "phpactor",
           "html",
-          "graphql",
           "gopls",
           "spectral",
         },
@@ -46,15 +44,7 @@ return {
         capabilities = capabilities
       })
 
-      lspconfig.phpactor.setup({
-        capabilities = capabilities
-      })
-
       lspconfig.html.setup({
-        capabilities = capabilities
-      })
-
-      lspconfig.graphql.setup({
         capabilities = capabilities
       })
 
