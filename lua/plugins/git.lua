@@ -11,14 +11,14 @@ return {
           topdelete = { text = "‾" },
           changedelete = { text = "~" },
         },
-        signcolumn = true,             -- Toggle with `:Gitsigns toggle_signs`
-        numhl = false,                 -- Toggle with `:Gitsigns toggle_numhl`
-        linehl = false,                -- Toggle with `:Gitsigns toggle_linehl`
-        word_diff = false,             -- Toggle with `:Gitsigns toggle_word_diff`
-        current_line_blame = true,     -- Toggle with `:Gitsigns toggle_current_line_blame`
+        signcolumn = true,         -- Toggle with `:Gitsigns toggle_signs`
+        numhl = false,             -- Toggle with `:Gitsigns toggle_numhl`
+        linehl = false,            -- Toggle with `:Gitsigns toggle_linehl`
+        word_diff = false,         -- Toggle with `:Gitsigns toggle_word_diff`
+        current_line_blame = true, -- Toggle with `:Gitsigns toggle_current_line_blame`
         current_line_blame_opts = {
           virt_text = true,
-          virt_text_pos = "eol",       -- 'eol' | 'overlay' | 'right_align'
+          virt_text_pos = "eol", -- 'eol' | 'overlay' | 'right_align'
           delay = 1000,
         },
         current_line_blame_formatter = "<author>, <author_time:%Y-%m-%d> - <summary>",
@@ -29,7 +29,7 @@ return {
         attach_to_untracked = true,
         sign_priority = 6,
         update_debounce = 200,
-        status_formatter = nil,     -- Use default
+        status_formatter = nil, -- Use default
         max_file_length = 40000,
         preview_config = {
           -- Options passed to nvim_open_win
@@ -73,12 +73,9 @@ return {
       "LazyGitFilter",
       "LazyGitFilterCurrentFile",
     },
-    -- optional for floating window border decoration
     dependencies = {
       "nvim-lua/plenary.nvim",
     },
-    -- setting the keybinding for LazyGit with 'keys' is recommended in
-    -- order to load the plugin when the command is run for the first time
     keys = {
       { "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" }
     }
