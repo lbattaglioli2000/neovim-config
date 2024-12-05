@@ -25,3 +25,5 @@ vim.opt.foldnestmax = 3
 
 -- Set fold level (affects the visibility of nested folds)
 vim.opt.foldlevel = 99
+
+vim.opt.clipboard = 'unnamedplus'
